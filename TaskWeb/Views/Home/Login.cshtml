@@ -1,0 +1,34 @@
+﻿@model TaskWeb.Dominio.Usuarios
+
+@{ 
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <table>
+        <tr>
+            <td>@Html.LabelFor(x=>x.Nome)</td>
+            <td>@Html.TextBoxFor(x => x.Nome)</td>
+            <td>@Html.ValidationMessageFor(x=>x.Nome)</td>
+        </tr>
+        @*<tr>
+            <td>@Html.LabelFor(x => x.Password)</td>
+            <td>@Html.TextBoxFor(x => x.Password)</td>
+            <td>@Html.ValidationMessageFor(x => x.Password)</td>
+        </tr>*@
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Login" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+}
+

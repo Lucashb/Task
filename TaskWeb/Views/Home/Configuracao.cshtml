@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TaskWeb.Dominio.CadastroSql>
+@{
+    ViewBag.Title = "Configuracao";
+}
+
+<h2>Configuracao</h2>
+
+<ul>
+    @foreach (var sql in Model)
+    {
+        <li>@sql.codigo</li>
+        <li>@sql.consultasql</li>
+    }
+</ul>

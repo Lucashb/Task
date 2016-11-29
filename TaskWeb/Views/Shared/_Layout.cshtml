@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div class="slidebar">
+        <h2>MENU</h2>
+        <ul>
+            <li><a @Html.ActionLink("Painel Geral", "Geral", "Home", new {}, new {})</a></li>
+            <li><a @Html.ActionLink("Configuracao", "Index", "Sql", new {}, new {})</a></li>
+        </ul>
+    </div>
+
+    <div class="conteudo">
+        <img src="~/Imagens/menu.png" class="menu-bar" />
+        @RenderBody()
+    </div>
+
+    <script src="~/Scripts/Abrir.js"></script>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jquery")
+    }
+</body>
+</html>
